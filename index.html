@@ -202,7 +202,7 @@
       <nav class="navbar" aria-label="Primary">
         <div class="logo">
           <img 
-            src="images/rl logo with text.png" 
+            src="images/rl-logo-with-text.png" 
             alt="Raven's Loft Web Design logo" 
             class="logo-img" 
             width="150" height="150" 
@@ -224,7 +224,10 @@
           aria-label="Toggle navigation"
           aria-controls="primary-nav"
         >
-        <label for="checkbox_toggle" class="hamburger" aria-label="Open menu">&#9776;</label>
+        <label for="checkbox_toggle" class="hamburger">
+          <span class="sr-only">Open menu</span>
+          &#9776;
+        </label>
 
         <ul class="nav-links" id="primary-nav">
           <li><a href="#home">Home</a></li>
@@ -383,7 +386,7 @@
             >
             <h3>Tradition of the Middle Path</h3>
 
-            <div class="project-meta" aria-label="Project details">
+            <div class="project-meta">
               <span class="meta-pill"><strong>Role:</strong> Design + Build</span>
               <span class="meta-pill"><strong>Focus:</strong> Storytelling + Accessibility</span>
               <span class="meta-pill"><strong>Scope:</strong> Multi-page site</span>
@@ -414,7 +417,7 @@
             >
             <h3>Obscura Meridian Co.</h3>
 
-            <div class="project-meta" aria-label="Project details">
+            <div class="project-meta">
               <span class="meta-pill"><strong>Type:</strong> Flagship concept</span>
               <span class="meta-pill"><strong>Focus:</strong> Brand architecture</span>
               <span class="meta-pill"><strong>Scope:</strong> Multi-site umbrella</span>
@@ -487,7 +490,7 @@
           </p>
         </div>
 
-        <div class="services-grid" aria-label="Service options">
+        <div class="services-grid">
           <div class="service-card">
             <h3>Starter Site</h3>
             <p class="service-desc">
@@ -546,7 +549,7 @@
           </p>
         </div>
 
-        <div class="contact-meta" aria-label="Contact expectations">
+        <div class="contact-meta">
           <div class="meta-item">
             <h3>Best for</h3>
             <p>Small business sites, creator portfolios, landing pages, and refactors.</p>
@@ -585,7 +588,6 @@
               type="text"
               autocomplete="name"
               required
-              aria-required="true"
             >
             <p class="error" aria-live="polite"></p>
           </div>
@@ -599,7 +601,6 @@
               inputmode="email"
               autocomplete="email"
               required
-              aria-required="true"
             >
             <p class="error" aria-live="polite"></p>
           </div>
@@ -612,7 +613,6 @@
               rows="6"
               minlength="10"
               required
-              aria-required="true"
               placeholder="What do you need built or improved? Timeline, goals, and any links help."
             ></textarea>
             <p class="error" aria-live="polite"></p>
