@@ -484,50 +484,92 @@
       <section id="contact">
         <div class="contact-heading">
           <h2>Contact</h2>
+          <p class="section-lede">
+            Tell me what you’re building (or fixing). I’ll reply within 1–2 business days with next steps and a clear recommendation.
+          </p>
         </div>
-        
-      <form class="contact-form"
+
+        <div class="contact-meta" aria-label="Contact expectations">
+          <div class="meta-item">
+            <h3>Best for</h3>
+            <p>Small business sites, creator portfolios, landing pages, and refactors.</p>
+          </div>
+          <div class="meta-item">
+            <h3>What happens next</h3>
+            <p>A quick review of your goals, then a short follow-up with scope and options.</p>
+          </div>
+          <div class="meta-item">
+            <h3>Operating under</h3>
+            <p>Raven’s Loft Web Design • A division of Obscura Meridian Co.</p>
+          </div>
+        </div>
+
+        <form
+          class="contact-form"
           action="https://formsubmit.co/b418b3b97a7c15a4d6d41f426d0616e0"
-          method="POST" novalidate>
-        <!-- Routing / deliverability -->
-        <input type="hidden" name="_subject" value="New Inquiry — Raven's Loft Web Design">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Optional: custom thank-you page -->
-        <input type="hidden" name="_next" value="https://rlwebdesign.net/thanks.html">
+          method="POST"
+          novalidate
+        >
+          <!-- Routing / deliverability -->
+          <input type="hidden" name="_subject" value="New Inquiry — Raven's Loft Web Design" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Optional: custom thank-you page -->
+          <input type="hidden" name="_next" value="https://rlwebdesign.net/thanks.html" />
 
-        <!-- Honeypot (spam trap) -->
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <!-- Honeypot (spam trap) -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text"
-                autocomplete="name" required aria-required="true">
-          <p class="error" aria-live="polite"></p>
-        </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              aria-required="true"
+            />
+            <p class="error" aria-live="polite"></p>
+          </div>
 
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email"
-                inputmode="email" autocomplete="email" required aria-required="true">
-          <p class="error" aria-live="polite"></p>
-        </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              required
+              aria-required="true"
+            />
+            <p class="error" aria-live="polite"></p>
+          </div>
 
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6"
-                    minlength="10" required aria-required="true"></textarea>
-          <p class="error" aria-live="polite"></p>
-        </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              minlength="10"
+              required
+              aria-required="true"
+              placeholder="What do you need built or improved? Timeline, goals, and any links help."
+            ></textarea>
+            <p class="error" aria-live="polite"></p>
+          </div>
 
-        <button class="btn btn-primary" type="submit" id="contact-submit">
-          Send Message
-        </button>
+          <button class="btn btn-primary" type="submit" id="contact-submit">
+            Send Message
+          </button>
 
-        <!-- Live region for submit status -->
-        <p class="submit-status" aria-live="polite"></p>
-      </form>
+          <!-- Live region for submit status -->
+          <p class="submit-status" aria-live="polite"></p>
+        </form>
       </section>
+
     </main>
 
     <!-- JS (vanilla) -->
