@@ -1049,6 +1049,14 @@ section {
   font-weight: 700;
 }
 
+.section-lede {
+  max-width: 65ch;
+  margin: var(--space-3) auto var(--space-8);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+
 
 /* Process */
 .process {
