@@ -1023,51 +1023,126 @@ section {
 }
 
 /* Process */
+/* PROCESS (polished to match Projects/Capabilities) */
 .process {
-  padding: var(--space-8) var(--space-4);
+  padding: var(--space-16) var(--space-4);
+  background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
   border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .process-heading {
   text-align: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.process-heading h2 {
+  margin: 0;
 }
 
 .process-sub {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
   color: var(--color-muted);
   max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
 }
 
+/* Grid becomes “cards”, not table cells */
 .process-steps {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: var(--container);
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-5);
-  max-width: var(--container);
-  margin-left: auto;
-  margin-right: auto;
+  gap: var(--space-6);
 }
 
+/* Card */
 .process-step {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--space-4);
-  padding: var(--space-5);
+  position: relative;
+  padding: var(--space-6);
   border: 1px solid var(--color-border);
-  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 160ms ease, box-shadow 200ms ease, border-color 120ms ease;
 }
 
-.step-label {
-  font-weight: 700;
-  color: var(--color-heading);
-  opacity: 0.8;
-  letter-spacing: 0.08em;
+.process-step::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 48px;
+  margin-bottom: var(--space-4);
+  background: color-mix(in srgb, var(--color-accent) 70%, transparent);
+  border-radius: 999px;
+  opacity: 0.9;
 }
+
+
+/* Hover/focus polish */
+.process-step:hover,
+.process-step:focus-within {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
+  box-shadow: 0 14px 36px rgba(163,29,47,0.18);
+}
+
+/* Step number badge (replaces the left column look) */
+.step-label {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+
+  color: var(--color-heading);
+  opacity: 0.75;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+}
+
+/* Step text hierarchy */
+.process-step h3 {
+  margin: 0 0 var(--space-3);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--color-heading);
+}
+
+.process-step p {
+  margin: 0;
+  color: var(--color-text);
+  opacity: 0.95;
+  line-height: 1.55;
+}
+
+/* Ensure the step-body doesn't collide with the badge */
+.step-body {
+  padding-right: 2.25rem;
+}
+
+/* Mobile tuning */
+@media (max-width: 480px) {
+  .process {
+    padding: var(--space-12) var(--space-4);
+  }
+  .process-steps {
+    gap: var(--space-4);
+  }
+  .process-step {
+    padding: var(--space-5);
+  }
+}
+
 
 /* CONTACT */
 #contact {
