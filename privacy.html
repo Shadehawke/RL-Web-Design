@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+
   <title>Privacy Policy | Raven's Loft Web Design</title>
   <meta name="robots" content="noindex,follow">
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="main.css?v=2025-12-21-1" />
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4497514963927011"
      crossorigin="anonymous"></script>
@@ -17,12 +19,24 @@
       <div class="logo">
         <img src="/images/rl logo with text.png" alt="Raven's Loft Web Design logo" class="logo-img" width="150" height="150">
       </div>
-      <ul class="nav-links"><div class="menu">
+
+      <input
+        type="checkbox"
+        id="checkbox_toggle"
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-controls="primary-nav"
+      />
+      <label for="checkbox_toggle" class="hamburger" aria-label="Open menu">
+        &#9776;
+      </label>
+
+      <ul class="nav-links" id="primary-nav">
         <li><a href="/">Home</a></li>
         <li><a href="/#about">About</a></li>
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#contact">Contact</a></li>
-      </div></ul>
+      </ul>
     </nav>
   </header>
 
@@ -47,6 +61,7 @@
   <footer class="site-footer">
     <div class="copyright">
       &copy; <span id="year"></span> <a href="/">Raven's Loft Web Design / Shawn Spitaleri</a>
+      <span class="footer-sub">&nbsp;•&nbsp;A division of Obscura Meridian Co.</span>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

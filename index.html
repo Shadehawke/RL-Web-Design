@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark">
+
     <!-- Primary Meta Tags -->
     <title>Raven's Loft Web Design | Digital Realms Crafted with Balance</title>
     <meta name="title" content="Raven's Loft Web Design | Digital Realms Crafted with Balance" />
@@ -33,7 +35,7 @@
     <meta name="theme-color" content="#a31d2f">
     
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="/main.css?v=2025-09-01-5">
+    <link rel="stylesheet" href="main.css?v=2025-12-21-1" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -146,6 +148,10 @@
         "name": "Shawn Spitaleri",
         "url": "https://www.linkedin.com/in/shawn-spitaleri-76091988/"
       },
+      "isPartOf": {
+        "@type": "Organization",
+        "name": "Obscura Meridian Co."
+      },
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -176,7 +182,7 @@
         "name": "Raven's Loft Web Design",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://RLWEBADDRESS.COM/images/rl-logo.png"
+          "url": "https://rlwebdesign.net/images/rl-logo.png"
         }
       }
     }
@@ -212,30 +218,34 @@
         </div>
 
         <!-- Hamburger control -->
-        <input type="checkbox" id="checkbox_toggle" class="nav-toggle" aria-label="Toggle navigation" />
-        <label for="checkbox_toggle" class="hamburger" aria-hidden="true">&#9776;</label>
+        <input
+          type="checkbox"
+          id="checkbox_toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-controls="primary-nav"
+        />
+        <label for="checkbox_toggle" class="hamburger" aria-label="Open menu">&#9776;</label>
 
-        <ul class="nav-links">
-          <div class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </div>
+        <ul class="nav-links" id="primary-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+
       </nav>
-    </section>
+    </header>
 
     <!-- COLLAPSING SOCIAL SIDEBAR -->
     <section class="sidebar" role="complementary" aria-label="Social links">
       <div class="s-media" id="social-panel">
-        <a href="#" class="s-item facebook" target="_blank" aria-label="Facebook">
-          <span class="fa-brands fa-facebook"></span>
-        </a>
-        <a href="https://www.github.com/shadehawke" class="s-item github" target="_blank" aria-label="GitHub">
+        <a href="https://www.github.com/shadehawke" class="s-item github" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub">
           <span class="fa-brands fa-github"></span>
         </a>
-        <a href="https://www.linkedin.com/in/shawn-spitaleri-76091988/" class="s-item linkedin" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/shawn-spitaleri-76091988/" class="s-item linkedin" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
           <span class="fa-brands fa-linkedin"></span>
         </a>
         <a href="mailto:info@rlwebdesign.net" class="s-item email" aria-label="Email">
@@ -389,14 +399,21 @@
       <div class="copyright">
         &copy; <span id="year"></span>
         <a href="/">Raven's Loft Web Design / Shawn Spitaleri</a>
+        <span class="footer-sub">&nbsp;•&nbsp;A division of Obscura Meridian Co.</span>
         &nbsp;•&nbsp;
         <a href="/privacy.html">Privacy</a>
         &nbsp;•&nbsp;
-        <button class="btn btn-ghost" id="cookie-settings" type="button" style="margin-left: .25rem;">
+        <button
+          class="btn btn-ghost"
+          id="cookie-settings"
+          type="button"
+          style="margin-left: 0.25rem"
+        >
           Cookie settings
         </button>
       </div>
     </footer>
+
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();

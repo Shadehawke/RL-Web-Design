@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark">
+
   <title>Page Not Found | Raven's Loft Web Design</title>
 
   <!-- Don’t index the 404 -->
@@ -12,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="main.css?v=2025-12-21-1" />
   <script src="https://kit.fontawesome.com/132e59aa06.js" crossorigin="anonymous"></script>
 
   <style>
@@ -81,20 +83,35 @@
   <header class="navigation">
     <nav class="navbar" aria-label="Primary">
       <div class="logo">
-        <img src="images/rl-logo.png" alt="Raven's Loft Web Design logo" class="logo-img" width="150" height="150" />
+        <img
+          src="/images/rl logo with text.png"
+          alt="Raven's Loft Web Design logo"
+          class="logo-img"
+          width="150"
+          height="150"
+        />
       </div>
-      <input type="checkbox" id="checkbox_toggle" class="nav-toggle" aria-label="Toggle navigation" />
-      <label for="checkbox_toggle" class="hamburger" aria-hidden="true">&#9776;</label>
-      <ul class="nav-links">
-        <div class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#projects">Projects</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </div>
+
+      <input
+        type="checkbox"
+        id="checkbox_toggle"
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-controls="primary-nav"
+      />
+      <label for="checkbox_toggle" class="hamburger" aria-label="Open menu">
+        &#9776;
+      </label>
+
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+
 
   <!-- Main -->
   <main class="notfound" id="wrap" tabindex="-1">
@@ -117,7 +134,9 @@
   <footer class="site-footer">
     <div class="copyright">
       &copy; <span id="year"></span> <a href="/">Raven's Loft Web Design / Shawn Spitaleri</a>
+      <span class="footer-sub">&nbsp;•&nbsp;A division of Obscura Meridian Co.</span>
     </div>
+
   </footer>
 
   <script>
