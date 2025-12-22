@@ -1178,6 +1178,93 @@ section {
   }
 }
 
+/* OFFER SHAPE */
+.services {
+  padding: var(--space-16) var(--space-4);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.services-heading {
+  margin-bottom: var(--space-8);
+}
+
+.services-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  text-align: left;
+}
+
+/* Cards match Projects/Capabilities language */
+.service-card {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 160ms ease, box-shadow 200ms ease, border-color 120ms ease;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
+  box-shadow: 0 14px 36px rgba(163,29,47,0.18);
+}
+
+.service-card h3 {
+  margin: 0 0 var(--space-3);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.service-desc {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text);
+  opacity: 0.95;
+  line-height: 1.55;
+}
+
+.service-list {
+  margin: 0;
+  padding-left: 1.1rem; /* restores bullets without affecting global li reset */
+  display: grid;
+  gap: var(--space-2);
+}
+
+.service-list li {
+  list-style: disc;
+  color: var(--color-text);
+  opacity: 0.95;
+  font-size: var(--font-size-400);
+}
+
+/* CTA row under the cards */
+.services-cta {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: var(--space-12) var(--space-4);
+  }
+  .services-grid {
+    gap: var(--space-4);
+  }
+  .service-card {
+    padding: var(--space-5);
+  }
+}
+
+
 
 /* CONTACT */
 #contact {
