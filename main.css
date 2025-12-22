@@ -21,6 +21,7 @@
     --color-heading: #efeff1;
     --color-accent: #a31d2f;
     --color-border:#3a3342;
+    --color-muted: color-mix(in srgb, var(--color-text) 65%, var(--color-bg));
 
     /* Gradients */
     --gradient-hero: linear-gradient(180deg, #0d0d10 0%, #17121c 60%, #0d0d10 100%);
@@ -554,6 +555,13 @@ li {
   border-bottom: 1px solid var(--color-border);
 }
 
+.intro-note {
+  margin-top: var(--space-3);
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+
 /* Left column: photo */
 .intro .photo {
   display: flex;
@@ -780,6 +788,32 @@ li {
   transition: transform 160ms ease, box-shadow 200ms ease, border-color 100ms ease;
 }
 
+.capabilities {
+  padding: var(--space-8) var(--space-4);
+}
+
+.capabilities-heading {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
+}
+
+.capability-card {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+}
+
+.capability-card h3 {
+  margin-bottom: var(--space-3);
+}
+
+
 /* Hover/focus polish */
 .project-card:hover,
 .project-card:focus-within {
@@ -844,6 +878,50 @@ li {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+.process {
+  padding: var(--space-8) var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.process-heading {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.process-sub {
+  margin-top: var(--space-2);
+  color: var(--color-muted);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+}
+
+.step-label {
+  font-weight: 700;
+  color: var(--color-heading);
+  opacity: 0.8;
+  letter-spacing: 0.08em;
+}
+
 
 /* CONTACT SECTION */
 #contact {
