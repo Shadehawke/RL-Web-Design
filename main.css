@@ -605,12 +605,7 @@ section {
   }
 }
 
-/* =======================================================================
-   HERO (PROFESSIONALIZED)
-   Supports both:
-   - NEW markup: .intro-content + .intro-lede
-   - OLD markup: .intro-heading + .intro-text + .intro-ctas
-   ======================================================================= */
+/* ==== HERO ==== */
 
 .intro {
   background: var(--gradient-hero);
@@ -849,30 +844,85 @@ section {
 
 /* Capabilities */
 .capabilities {
-  padding: var(--space-8) var(--space-4);
+  padding: var(--space-16) var(--space-4);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .capabilities-heading {
   text-align: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.capabilities-heading h2 {
+  margin: 0;
 }
 
 .capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
   max-width: var(--container);
   margin: 0 auto;
+  padding: 0;
 }
 
+/* Card styling aligned with project-card language */
 .capability-card {
-  padding: var(--space-5);
+  padding: var(--space-6);
   border: 1px solid var(--color-border);
-  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 160ms ease, box-shadow 200ms ease, border-color 120ms ease;
 }
 
+/* Better hierarchy */
 .capability-card h3 {
-  margin-bottom: var(--space-3);
+  margin: 0 0 var(--space-3);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--color-heading);
+  letter-spacing: 0.2px;
+}
+
+.capability-card p {
+  margin: 0;
+  color: var(--color-text);
+  opacity: 0.95;
+  line-height: 1.55;
+}
+
+.capability-card::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 48px;
+  margin-bottom: var(--space-4);
+  background: color-mix(in srgb, var(--color-accent) 70%, transparent);
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+/* Hover/focus polish (mirrors Projects behavior) */
+.capability-card:hover,
+.capability-card:focus-within {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
+  box-shadow: 0 14px 36px rgba(163,29,47,0.18);
+}
+
+/* Mobile tuning */
+@media (max-width: 480px) {
+  .capabilities {
+    padding: var(--space-12) var(--space-4);
+  }
+  .capabilities-grid {
+    gap: var(--space-4);
+  }
+  .capability-card {
+    padding: var(--space-5);
+  }
 }
 
 /* Projects */
