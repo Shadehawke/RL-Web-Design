@@ -1000,7 +1000,6 @@ section {
 .project-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
   object-fit: contain;
   border-bottom: 1px solid var(--color-border);
   background: #0f0f12;

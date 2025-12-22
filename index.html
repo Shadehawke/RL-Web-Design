@@ -34,8 +34,10 @@
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#a31d2f">
     
+    <link rel="preload" as="image" href="images/Headshot.webp" fetchpriority="high">
+
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="main.css?v=2025-12-21-1">
+    <link rel="stylesheet" href="main.css?v=2025-12-22-1">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -270,11 +272,12 @@
         <div class="photo">
           <img
             class="headshot"
-            src="images/Headshot.jpg"
+            src="images/Headshot.webp"
             alt="Portrait of Shawn Spitaleri, Web Designer at Raven's Loft"
             width="320"
             height="400"
             loading="eager"
+            decoding="async"
             fetchpriority="high"
           >
         </div>
