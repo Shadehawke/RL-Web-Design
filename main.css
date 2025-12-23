@@ -114,10 +114,12 @@ body {
   line-height: var(--line-height);
 }
 
+/*
 html, body {
   width: 100%;
   overflow-x: hidden;
 }
+  */
 
 .skip-link {
   position: absolute;
@@ -195,6 +197,7 @@ section {
 
 /* Constrain content width and center it */
 #wrap {
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
   padding-inline: var(--space-4);
@@ -211,6 +214,22 @@ section {
 .process-heading h2,
 .capabilities-heading h2 {
   margin-bottom: var(--space-6);
+}
+
+/* Stop grid children from expanding the page */
+.projects-grid,
+.capabilities-grid,
+.process-steps,
+.services-grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.projects-grid > *,
+.capabilities-grid > *,
+.process-steps > *,
+.services-grid > * {
+  min-width: 0;
 }
 
 .section-divider {
@@ -647,9 +666,19 @@ section {
   padding: clamp(var(--space-12), 8vh, var(--space-16)) var(--space-6);
 
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: var(--space-12);
   align-items: center;
+}
+
+/* Prevent grid items from forcing horizontal overflow */
+.intro {
+  width: 100%;
+  max-width: 100%;
+}
+
+.intro > * {
+  min-width: 0;
 }
 
 /* Keep photo column calm and intentional */
